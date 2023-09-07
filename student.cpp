@@ -157,20 +157,21 @@ int main(){
     fin.close();
     while(true)
     {
-        cout << "_______________________________________________________________________________"<<endl;
-        cout << "\t\t\t\t\t\n-----------Welcome to Student Dairy-------------\t\t"<<endl;
-        cout << "_______________________________________________________________________________"<<endl;
-        cout << "\n\n**********************************************************************";
+        cout << "\t\t\t\t_______________________________________________________________________________";
+        cout << "\n\t\t\t\t\t\t-----------Welcome to Student Dairy-------------"<<endl;
+        cout << "\t\t\t\t_______________________________________________________________________________\t\t"<<endl;
+        cout << "\n\t\t\t\t**********************************************************************\t\t\t\t";
         cout <<"\n";
-        cout << "\t\t\t 1) Add Student\t\t\t" << endl;
-        cout << "\t\t\t 2) Print all Students\t\t\t" << endl;
-        cout << "\t\t\t 3) Search a Student\t\t\t" << endl;
-        cout << "\t\t\t 4) Update a Student\t\t\t" << endl;
-        cout << "\t\t\t 5) Delete a Student\t\t\t" << endl;
-        cout << "\n************************************************************************";
+        cout << "\t\t\t\t\t\t\t 1) Add Student\t\t\t\t\t\t\t" << endl;
+        cout << "\t\t\t\t\t\t\t 2) Print all Students\t\t\t\t\t\t\t" << endl;
+        cout << "\t\t\t\t\t\t\t 3) Search a Student\t\t\t\t\t\t\t" << endl;
+        cout << "\t\t\t\t\t\t\t 4) Update a Student\t\t\t\t\t\t\t" << endl;
+        cout << "\t\t\t\t\t\t\t 5) Delete a Student\t\t\t\t\t\t\t" << endl;
+        cout << "\t\t\t\t\t\t\t 6) Exit\t\t\t\t\t\t\t" << endl;
+        cout << "\n\t\t\t\t************************************************************************\t\t\t\t";
         cout << "\n\n\n";
-        cout << "\t\t\tEnter Your Choice\t\t\t" << endl;
-        cout << "\t\t\t\t";
+        cout << "\t\t\t\t\t\t\tEnter Your Choice\t";;
+        // cout << "\t\t\t\t\t\t\t\t";
         cin >> choice;
         switch (choice)
         {
@@ -183,23 +184,26 @@ int main(){
             break;
 
         case 3:
-           cout << "\t\t\tEnter Student Id\t\t\t" << endl;
+           cout << "\t\t\t\t\t\t\tEnter Student Id\t\t\t\t\t\t\t" << endl;
             cin >> idx;
             s.searchStudent(idx);
             break;
 
         case 4:
-            cout <<"\t\t\tEnter Student Id\t\t\t"<< endl;
+            cout <<"\t\t\t\t\t\t\tEnter Student Id\t\t\t\t\t\t\t"<< endl;
             cin >> idx;
             s.updateStudent(idx);
             break;
 
         case 5:
-            cout << "\t\t\tEnter Student Id\t\t\t" << endl;
+            cout << "\t\t\t\t\t\t\tEnter Student Id\t\t\t\t\t\t\t" << endl;
             cin >> idx;
             s.deleteStudent(idx);
             break;
 
+        case 6:
+        cout << "\t\t\t\t\t\t\t You Exits\t\t\t\t\t\t\t" << endl;
+        exit(0);
         default:
             return 0;
         }
