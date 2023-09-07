@@ -1,5 +1,6 @@
 #include<iostream>
 #include<fstream>
+
 using namespace std;
 int ID;
 class Student
@@ -51,14 +52,14 @@ class Student
             fin>>s.age;
             fin.ignore();
             getline(fin,s.stream);
-            
+
         cout << "\n" << "Id: " << s.id;
         cout << "\n" << "Name: " << s.name;
         cout << "\n" << "Age: " << s.age;
         cout << "\n" << "Stream: " << s.stream;
         }
         fin.close();
-        
+
     }
     void deleteStudent(int idx)
     {
@@ -100,7 +101,7 @@ class Student
             fin.ignore();
             getline(fin, s.stream);
 
-    if(idx == s.id){      
+    if(idx == s.id){
         cout << "\nId = " << s.id;
         cout << "\nName = " << s.name;
         cout << "\nAge = " << s.age;
@@ -113,7 +114,7 @@ class Student
 }
     void updateStudent(int idx)
     {
-      
+
         deleteStudent(idx);
         Student s;
         ofstream fout;
@@ -137,6 +138,7 @@ class Student
     }
 };
 int main(){
+    system("color 30");
     Student s;
     int choice;
     int idx;
@@ -154,7 +156,7 @@ int main(){
     }
     fin.close();
     while(true)
-    {   
+    {
         cout << "_______________________________________________________________________________"<<endl;
         cout << "\t\t\t\t\t\n-----------Welcome to Student Dairy-------------\t\t"<<endl;
         cout << "_______________________________________________________________________________"<<endl;
@@ -197,7 +199,7 @@ int main(){
             cin >> idx;
             s.deleteStudent(idx);
             break;
-        
+
         default:
             return 0;
         }
